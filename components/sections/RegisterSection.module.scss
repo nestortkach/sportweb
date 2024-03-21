@@ -1,0 +1,11 @@
+.registerSection {
+  width: 33.333%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  &__title {
+    font-size: 20px;
+    color: #191919;
+  }
+}

@@ -1,0 +1,103 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.cardGrid {
+  display: block;
+
+  &--theme-light {
+    
+  }
+
+  &--theme-dark {
+    background: $color__branding-black;
+    color: white;
+  }
+
+  &__heading {
+
+
+    .cardGrid--theme-dark & {
+      color: inherit;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+    @include breakpoint(lt-desktop) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    border: 1px solid $color__border-light;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include breakpoint(lt-desktop) {
+      padding: 40px 30px;
+      flex-direction: row;
+      gap: 10%;
+    }
+
+    @include breakpoint(lt-tablet) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .cardGrid--theme-dark & {
+      border-color: $color__border-medium;
+    }
+
+    &-heading {
+      margin: 0;
+      @include font-size(24);
+
+      @include breakpoint(lt-desktop) {
+        flex-basis: 20%;
+        flex-shrink: 0;
+      }
+
+      @include breakpoint(lt-tablet) {
+        flex-basis: auto;
+      }
+
+      .cardGrid--theme-dark & {
+        color: inherit;
+      }
+    }
+
+    &-content {
+      margin: 0;
+      color: $color__text-medium;
+      @include font-size(18);
+
+      @include breakpoint(lt-desktop) {
+        margin: 0;
+      }
+
+      .cardGrid--theme-dark & {
+        color: $color__text-light;
+      }
+    }
+
+    &-buttons {
+      margin-top: auto;
+
+      @include breakpoint(lt-desktop) {
+        margin: 0;
+        flex-direction: column;
+      }
+
+      @include breakpoint(lt-tablet) {
+        flex-direction: row;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

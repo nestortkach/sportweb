@@ -1,0 +1,62 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.hero-homepage {
+  display: grid;
+  color: white;
+
+  &__image {
+    grid-area: 1/1;
+    position: relative;
+    aspect-ratio: 1440 / 700;
+    background: black;
+    height: auto;
+
+    img {
+      object-fit: cover;
+    }
+
+    @include breakpoint(lt-desktop) {
+      aspect-ratio: unset;
+      min-height: 500px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 3;
+    }
+  } 
+
+  &__content {
+    grid-area: 1/1;
+    place-items: center;
+    display: grid;
+    position: relative;
+    z-index: 4;
+
+    @include breakpoint(lt-desktop) {
+      padding: 160px 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 40px;
+    color: inherit;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(48);
+    }
+
+    @include breakpoint(lt-tablet) {
+      @include font-size(38);
+      margin: 0 0 20px;
+    }
+  }
+}

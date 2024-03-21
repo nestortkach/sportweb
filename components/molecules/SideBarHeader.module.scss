@@ -1,0 +1,25 @@
+.sidebarHeader {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2% 0 5%;
+  min-height: 100px;
+  &__text {
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+  }
+  &__buttonContainer {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__buttonClose {
+    width: 30px;
+    height: 30px;
+  }
+}

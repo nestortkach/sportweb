@@ -1,0 +1,28 @@
+.service {
+  &__item {
+    display: flex;
+    border-top: 1px solid #e8e8e8;
+    padding: 25px;
+    justify-content: space-between;
+    color: #191e49;
+    font-size: 17px;
+    line-height: 20px;
+    align-items: center;
+    min-height: 80px;
+    padding: 13px 25px;
+    cursor: pointer;
+  }
+  &__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.options {
+  &__price {
+    font-weight: 600;
+    border-right: 1px solid #9b9b9b;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,11 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.mindBody {
+
+
+  &--theme-dark {
+    background: $color__branding-black;
+    color: $color__branding-white;
+  }
+}

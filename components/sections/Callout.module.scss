@@ -1,0 +1,48 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.callout {
+  
+
+  &--theme-dark {
+    background: $color__branding-black;
+    color: $color__branding-white;
+  }
+
+  &__heading {
+    max-width: 800px;
+    @include font-size(48);
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(42);
+    }
+
+    @include breakpoint(lt-tablet) {
+      @include font-size(34);
+    }
+
+    .callout--theme-dark & {
+      color: inherit;
+    }
+  }
+
+  &__content {
+    max-width: 800px;
+    color: $color__text-medium;
+    @include font-size(18);
+    line-height: 1.5;
+    margin: 20px 0 0;
+
+    .callout--theme-dark & {
+      color: $color__text-light;
+    }
+
+    strong {
+      color: white;
+      font-weight: 700;
+    }
+  }
+}

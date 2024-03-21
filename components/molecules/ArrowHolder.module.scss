@@ -1,0 +1,26 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.arrowHolder {
+  width: 52px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  &--forward {
+    transform: scaleX(-1);
+  }
+
+  &__triangle {
+    grid-area: 1/1;
+  }
+
+  &__arrow {
+    grid-area: 1/1;
+    height: 16px;
+    width: auto;
+    transform: scaleX(-1);
+    margin-left: 2px;
+  }
+}

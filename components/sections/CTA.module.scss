@@ -1,0 +1,43 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.cta {
+  text-align: center;
+  color: $color__branding-white;
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+  }
+
+  &__background {
+    grid-area: 1 / 1;
+    position: relative;
+
+    &-image {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    grid-area: 1 / 1;
+    position: relative;
+    z-index: 1;
+    padding: 100px 50px;
+    background: rgba(0, 0, 0, .5);
+
+    @include breakpoint(lt-desktop) {
+      padding: 80px 30px;
+    }
+
+    @include breakpoint(lt-tablet) {
+      padding: 80px 20px;
+    }
+  }
+
+  &__heading {
+    max-width: 555px;
+    margin: 0 auto;
+    color: $color__branding-white;
+  }
+}

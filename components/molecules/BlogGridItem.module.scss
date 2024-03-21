@@ -1,0 +1,54 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.blogGridItem {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &__image-wrap {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 77%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  &__date {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: 700;
+    @include font-size(14);
+  }
+
+  &__title {
+    margin: 0;
+    @include font-size(24);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__button {
+    margin: 25px 0 0;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include font-size(14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color__branding-yellow;
+    transition: .3s ease;
+    letter-spacing: .143em;
+
+    &-arrow {
+      height: 1em;
+    }
+  }
+}

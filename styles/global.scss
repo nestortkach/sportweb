@@ -1,0 +1,219 @@
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/typography';
+@import 'global/buttons';
+@import 'global/links';
+@import 'global/animate';
+
+@import 'global/layout';
+@import 'global/header';
+@import 'global/footer';
+
+@import 'global/components';
+@import 'global/forms';
+@import 'global/modals';
+
+.mindBody {
+
+  // Appointments widget
+  .appointments {
+    text-align: center;
+  }
+
+  .action_icon.cart_version {
+    display: none;
+  }
+
+  .action_icon.my_account_version {
+    color: inherit !important;
+    text-decoration: none;
+  }
+
+  .action_text.my_account_text {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .header h1:first-of-type {
+    display: none;
+  }
+
+  a {
+    color: inherit !important;
+  }
+
+  .pre-filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 40px 20px;
+
+    @include breakpoint(lt-tablet) {
+      gap: 20px;
+    }
+
+    & > div {
+      margin: 0 !important;
+
+      &:first-of-type,
+      &:nth-of-type(2) {
+        flex-basis: 40%;
+        flex-grow: 1;
+
+        @include breakpoint(lt-tablet) {
+          flex-basis: 100%;
+        }
+      }
+
+      &:nth-of-type(3) {
+        flex-basis: 100%;
+        flex-grow: 1;
+      }
+    }
+
+    select {
+      width: 100%;
+      height: 60px;
+      border-radius: 0;
+      border: none;
+      background: $color__branding-white;
+      color: $color__branding-black;
+      appearance: none;
+      padding: 0 30px;
+      background-image: url('/ui/chevron-down.svg');
+      background-repeat: no-repeat;
+      background-position: right 30px center;
+      background-size: 12px;
+    }
+
+    .ui-datepicker {
+      width: calc(100% + 14px);
+      border: none;
+      background: none;
+      border-radius: 0;
+      color: inherit;
+      margin: -7px;
+
+      .ui-datepicker-header {
+        background: none;
+        border: none;
+        color: inherit;
+        font-weight: 500;
+        @include font-size(24);
+        line-height: 1;
+        padding: 0;
+      }
+
+      th {
+        font-weight: 500;
+        @include font-size(18);
+        padding: 1em 0 .25em;
+
+        @include breakpoint(lt-tablet) {
+          @include font-size(16);
+        }
+      }
+
+      td {
+        padding: 7px;
+
+        @include breakpoint(lt-tablet) {
+          padding: 2px;
+        }
+      }
+
+      .ui-state-default {
+        border: 1px solid #6C6C6C;
+        background: none;
+        color: $color__branding-white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(lt-tablet) {
+          @include font-size(16);
+        }
+
+        &:hover {
+          background: $color__branding-yellow;
+          color: $color__branding-white;
+          border-color: $color__branding-yellow;
+        }
+      }
+
+      a.ui-state-default, 
+      a.ui-state-active {
+        color: $color__branding-white !important;
+      }
+
+      .ui-state-active {
+        border: 1px solid #6C6C6C;
+        background: $color__branding-yellow;
+        color: $color__branding-white;
+        border-color: $color__branding-yellow;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ui-state-disabled {
+        opacity: 1;
+
+        .ui-state-default {
+          background: #2E2E2E;
+          color: #6C6C6C;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .healcode-trainer {
+    text-align: left;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+
+    @include breakpoint('lt-tablet') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trainer-label {
+      margin: 0 0 15px;
+      grid-column: 1 / span 6;
+
+      @include breakpoint('lt-tablet') {
+        grid-column: 1 / span 2;
+      }
+
+      a {
+        color: $color__branding-yellow !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include font-size(18);
+        letter-spacing: .11em;
+      }
+    }
+
+    .appointment.button a {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      border: 1px solid $color__border-medium;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 500;
+      background: none !important;
+
+      &:hover {
+        background: $color__branding-yellow !important;
+        border-color: $color__branding-yellow !important;
+      }
+    }
+  }
+}

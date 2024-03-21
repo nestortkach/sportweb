@@ -1,0 +1,93 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.marqueeHeading {
+  color: $color__branding-white;
+  overflow: hidden;
+
+  @include breakpoint(lt-tablet) {
+    padding: 40px 0;
+  }
+
+  &--theme-dark {
+    background: $color__branding-black;
+  }
+
+  &--theme-light {
+    background: $color__branding-white;
+  }
+
+  &__grid {
+    display: grid;
+    overflow: hidden;
+  }
+
+  &__image {
+    grid-area: 1/1;
+    height: auto;
+
+    &--theme-dark {
+      background: $color__branding-black;
+    }
+
+    &--theme-light {
+      background: $color__branding-white;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    @include breakpoint(lt-desktop) {
+      aspect-ratio: unset;
+    }
+
+    &-container {
+      position: relative;
+      aspect-ratio: 1440 / 700;
+
+      @include breakpoint(lt-tablet) {
+        aspect-ratio: 335 / 230;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 3;
+      }
+    }
+  }
+  
+  &__content {
+    grid-area: 1/1;
+    place-items: center;
+    display: grid;
+    position: relative;
+    z-index: 4;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__title {
+    position: absolute;
+    text-align: center;
+    color: inherit;
+    @include font-size(86);
+    text-transform: uppercase;
+    display: flex;
+    gap: .2em;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(48);
+    }
+
+    @include breakpoint(lt-tablet) {
+      @include font-size(38);
+    }
+  }
+}

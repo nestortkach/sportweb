@@ -1,0 +1,39 @@
+.service {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2 0px;
+    padding: 25px 0;
+  }
+}
+.info {
+  &__name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #191e49;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  &__type {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
+}

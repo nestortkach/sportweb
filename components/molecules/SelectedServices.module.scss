@@ -1,0 +1,22 @@
+.selectedContainer {
+  max-height: 145px;
+  overflow: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #e7e7e7;
+  border-radius: 10px;
+  padding: 10px;
+}
+.selectedServices {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

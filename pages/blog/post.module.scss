@@ -1,0 +1,71 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.hero-blog {
+  padding: 60px 0;
+  background: $color__branding-black;
+  color: $color__branding-white;
+
+  &__date {
+    text-transform: uppercase;
+    color: $color__branding-yellow;
+    display: block;
+    margin: 0 0 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.0625em;
+  }
+
+  &__title {
+    text-transform: capitalize;
+    letter-spacing: 0;
+    margin: 0;
+    @include font-size(68);
+    color: $color__branding-white;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(48);
+    }
+
+    @include breakpoint(lt-tablet) {
+      @include font-size(34);
+    }
+  }
+}
+
+.blog-content {
+  background: $color__branding-white;
+  color: $color__branding-black;
+  line-height: 1.5;
+  @include font-size(18);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color__branding-black;
+    margin: 0 0 .5em;
+  }
+
+  p {
+    margin: 0 0 1em;
+
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 1.5em;
+    }
+  }
+
+  a {
+    color: $color__text-main;
+    text-decoration: none;
+
+    &:hover {
+      color: $color__branding-yellow;
+    }
+  }
+}

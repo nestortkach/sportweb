@@ -1,0 +1,29 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.experiencesCategory {
+  
+
+  &__heading {
+    @include font-size(86);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 0;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(56);
+    }
+  
+    @include breakpoint(lt-tablet) {
+      @include font-size(34);
+    }
+  }
+
+  &__list {
+    margin-top: 50px;
+
+    @include breakpoint(lt-tablet) {
+      margin-top: 40px;
+    }
+  }
+}

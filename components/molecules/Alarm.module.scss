@@ -1,0 +1,33 @@
+.alarm {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: rgb(255, 208, 208);
+  transition: all 300ms ease-in-out;
+  &__active {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  &__hide {
+    opacity: 0;
+    transform: translate(-20px, 0px);
+  }
+  &__sign {
+    color: rgb(255, 208, 208);
+    background: rgb(197, 0, 0);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+  &__text {
+    color: rgb(197, 0, 0);
+  }
+}

@@ -1,0 +1,88 @@
+.global-footer {
+  background: $color__branding-black;
+  color: $color__branding-white;
+  border-top: 1px solid $color__border-dark;
+
+  &__main {
+    padding: 80px 0;
+  }
+
+  &__cols {
+    display: flex;
+    gap: 120px;
+  }
+
+  &__info {
+    margin-left: auto;
+  }
+
+  &__bottom {
+    border-top: 1px solid $color__border-dark;
+    padding: 20px 0;
+  }
+
+  &__copyright {
+    @include font-size(12);
+    color: $color__text-light;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__location {
+    color: $color__text-light;
+
+    &-title {
+      @include font-size(15);
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .067em;
+      color: $color__branding-white;
+    }
+
+    &-address {
+      line-height: 2;
+    }
+
+    a {
+      color: $color__text-light;
+      text-decoration: none;
+    }
+
+    &-phone, 
+    &-whatsapp {
+      line-height: 2;
+    }
+  }
+}
+
+.footer-menus {
+  display: flex;
+  gap: 80px;
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-item {
+
+
+      &-link {
+        color: $color__branding-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include font-size(15);
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: .067em;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 200px;
+  &__list {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    transform: translate(0, 0px);
+    & div {
+      text-align: center;
+      padding: 5px;
+      cursor: pointer;
+      border: 1px solid #000;
+      border-top: none;
+      background: #fff;
+      &:last-child {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    }
+  }
+  & button {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    z-index: 11;
+  }
+}
+.showList {
+  z-index: 10;
+  opacity: 1;
+  transform: translate(0, 35px);
+}

@@ -1,0 +1,74 @@
+@import '/styles/global/variables';
+@import '/styles/global/mixins';
+
+.getStartedLink {
+  background: $color__branding-black;
+  border-bottom: 1px solid $color__border-dark;
+  padding: 90px 0;
+  color: $color__branding-white;
+  text-decoration: none;
+  transition: .3s ease;
+
+  @include breakpoint(lt-tablet) {
+    padding: 48px 0;
+  }
+
+  .getStartedOverlay & {
+    min-height: 25vh;
+  }
+
+  &:hover {
+    color: $color__branding-yellow;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+    @include breakpoint(lt-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include font-size(78);
+    letter-spacing: .064em;
+    font-weight: 500;
+    margin: 0;
+    color: inherit;
+
+    @include breakpoint(lt-desktop) {
+      @include font-size(60);
+    }
+
+    @include breakpoint(lt-tablet) {
+      @include font-size(40);
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    white-space: nowrap;
+
+    @include breakpoint(lt-tablet) {
+      color: $color__branding-yellow;
+    }
+
+    &-text {
+      @include font-size(24);
+      font-weight: 500;
+    }
+
+    &-arrow {
+      width: 25px;
+      height: auto;
+    }
+  }
+}

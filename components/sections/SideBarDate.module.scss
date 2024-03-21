@@ -1,0 +1,122 @@
+.date {
+  width: 500px;
+  &__button {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  &__sequenceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  &__serviceSequence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #191e49;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  &__warning {
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px;
+    color: #191e49;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #000;
+    & p {
+      margin: 0;
+      margin-bottom: 10px;
+      line-height: 25px;
+    }
+  }
+}
+.warning {
+  &__title {
+    background: #191e49;
+    color: #fff;
+    padding: 10px;
+  }
+}
+
+.calendar {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__header {
+    color: #191e49;
+    font-weight: 600;
+    padding: 20px 0;
+    margin: 0;
+  }
+  &__arrow {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    font-weight: 500;
+    &:hover {
+      color: #191e49;
+    }
+  }
+  &__currentWeek {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+  &__selectedDateInfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    color: #191e49;
+    background: #e8ddfc;
+    border-top: 1px solid #e8e8e8;
+    & span {
+      font-weight: 500;
+      margin-left: 10px;
+    }
+  }
+}
+
+.dateInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__dayofweek {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__date {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    color: #191e49;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      background: #e8ddfc;
+    }
+  }
+}
+
+.selectedDate {
+  background: #191e49;
+  color: #fff;
+  &:hover {
+    background: #363d75;
+  }
+}

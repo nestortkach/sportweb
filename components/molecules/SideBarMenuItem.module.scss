@@ -1,0 +1,19 @@
+.menuItem {
+  cursor: default;
+  padding: 4px 18px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  transition: all 300ms ease-in-out;
+  &--active {
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #191e49;
+      background: transparent;
+      color: #191e49;
+    }
+  }
+  &--selected {
+    background: #191e49;
+    color: #fff;
+  }
+}

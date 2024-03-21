@@ -1,0 +1,80 @@
+body {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font__main;
+	line-height: 1.5;
+	color: $color__text-medium;
+}
+
+.eyebrow {
+	@include font-size(18);
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: .11em;
+	font-weight: 700;
+	color: $color__branding-yellow;
+	margin: 0 0 30px;
+
+	@include breakpoint(lt-tablet) {
+		margin: 0 0 24px;
+	}
+}
+
+.margin-fix {
+	& > *:first-child {
+		margin-top: 0 !important;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color__text-main;
+}
+
+h1 {
+	@include font-size(86);
+	line-height: 1.05;
+	letter-spacing: .116em;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	@include breakpoint(lt-desktop) {
+		@include font-size(56);
+	}
+
+	@include breakpoint(lt-tablet) {
+		@include font-size(38);
+	}
+}
+
+h2 {
+	@include font-size(48);
+	line-height: 1;
+	font-weight: 500;
+
+	@include breakpoint(lt-desktop) {
+		@include font-size(42);
+	}
+
+	@include breakpoint(lt-tablet) {
+		@include font-size(34);
+	}
+}
+
+h3 {
+	@include font-size(32);
+	line-height: 1;
+	font-weight: 500;
+
+	@include breakpoint(lt-tablet) {
+		@include font-size(24);
+	}
+}

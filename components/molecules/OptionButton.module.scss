@@ -1,0 +1,11 @@
+.optionButton {
+  border-radius: 50%;
+  background: #191e49;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    transform: scale(1.15);
+  }
+}

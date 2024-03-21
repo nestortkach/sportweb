@@ -1,0 +1,32 @@
+.selectOptions {
+  max-height: 122px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #bbbbbb;
+  transition: all 300ms ease-in-out;
+  border-top: none;
+  overflow: auto;
+  display: block;
+  &__option {
+    background: #ffffff;
+    color: #191e49;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-top: 1px solid #bbbbbb;
+    z-index: 10;
+    &:first-child {
+      border-top: none;
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &--hidden {
+    opacity: 0;
+    transform: translate(0, -30px);
+    z-index: -1;
+  }
+}
